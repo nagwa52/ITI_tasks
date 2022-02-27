@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <title>Web Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .Pro-container{
+            margin: 10px;
+            padding: 4px;
+            /* background-color: #eee; */
+        }
+        .first-nav{
+            display: flex;
+            background-color: black;
+            height: 37px;
+            justify-content: space-around;
+
+        }
+        .first-nav input[type=text] {
+  /* float: left; */
+  padding: 1px;
+  margin-top: 10px;
+  margin-left: 30px;
+  border: none;
+  font-size: 13px;
+  flex-direction: column;
+  height:20px;
+  background-color: gray;
+
+
+}
+.icon {
+  padding-left: 25px;
+  background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+  background-size: 20px;
+}
+.first-nav .first-button .register ,.login{
+  border: none;
+  padding: 1px;
+  margin-top: 10px;
+  background-color: black;
+  color: gray;
+}
+.ver-hr{
+    display: inline-flex;
+  height: 15px;
+}
+hr{
+    margin: 0px 2px 0px 2px;
+    color: gray;
+}
+
+hr.low{
+    display: block;
+    margin: 16px 2px 13px 2px;
+  border-style: inset;
+    border: 1px solid #212124;
+    width:50%;
+ 
+}
+.second-nav{
+    margin:  0 auto ;
+height: 60px;
+width: 80%;
+padding: 0px 10%;
+/* background-color: rgba(black, 0.5); */
+background-color: #434343;
+ z-index: 3;
+}
+
+.titles{
+    position: relative;
+    margin: auto;
+    width: 60%; 
+     /* padding: 0px 20px;   */
+}
+.header{
+   position: absolute;
+   top: 51px;
+   left: 93px;
+   font-size: 30px;
+   font-weight: bolder;
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+li a {
+  display: inline-flex;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.low-words{
+    font-size: 15px;
+    margin: 20px 0px;
+    padding: 20px 0px;
+}
+.Three-parts{
+    margin:10px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.left-part,.center-part,.right-part{
+    margin: 10px 5px;
+    padding: 5px;
+}
+/* .text{
+    text-align: center;
+} */
+.low-icon{
+    margin: 10px auto;
+}
+.end-part{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px auto;
+    padding: 3px auto;
+}
+.button-design{
+    background-color: #f5f5f5;
+    border: 1px solid gainsboro;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    width: 60px;
+    height: 30px;
+    display: block;
+    border-radius: 0.5em;
+
+}
+.paragraph{
+    margin: 3px auto;
+    padding: 7px 0px;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: grey;
+    font-style: italic;
+    font-weight: bold;
+}
+footer{
+    display: flex;
+            background-color: black;
+            height: auto;
+            justify-content: space-around;
+            
+}
+.footer-container{
+    margin: auto;
+}
+.Three-parts-footer{
+    display: flex;
+justify-content: space-between;
+
+}
+.end-part-footer{
+display: flex;
+justify-content: space-between;
+}
+.display-footer{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;  
+}
+.row-display{
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 14px;
+    padding: 5px 10px;
+}
+.fab,.fas,.fal{
+    color: grey;
+    margin: 6px;;
+}
+    </style>
+</head>
+<body>
+    <div class="Pro-container">
+  <div class="container">
+      <div class="first-nav">
+        <input type="text" class="icon" >
+<div class="first-button">
+    <button class="register">Register</button>
+    <div class="ver-hr">
+       <hr>
+    </div>
+    <button class="login">Login</button>
+</div>
+    </div>
+    <div class="second-nav">
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">About</a></li>
+            <li><a href="#Events">Events</a></li>
+            <li><img src="" alt=""></li>
+            <li><a href="#Gallery">Gallery</a></li>
+            <li><a href="#Blog">Blog</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
+    </div>
+    <div class="titles">
+        <img src="./images.png" style="height: 400px;width: 100%;" alt="">
+        <div class="header">
+            <p>Lorem ipsum</p>
+            <p>dolor sit amet </p> 
+            <div >
+                <hr class="low">
+                </div>
+                <div class="low-words">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+                    <p>nulla architecto suscipit ab expedita alias voluptates</p> 
+                    <p>facere cumque repellat assumenda maiores accusamus </p>
+                 </div>
+        </div>
+        
+    
+    <div class="Three-parts">
+       <div class="left-part">
+           <div class="low-icon">
+            <i class="fas fa-home fa-5x"></i>
+           </div>
+
+           <div class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsa inventore id tempora quam culpa veniam repellendus, consequuntur
+            enim sint magni impedit, quibusdam voluptate rem dolores esse fugiat minus eveniet?
+           </div>
+           <div class="end-part">
+            <p class="paragraph">Sunday 12 November 2021</p>
+            <button class="button-design">Read ></button>
+           </div>
+
+       </div> 
+
+       <div class="center-part">
+        <div class="low-icon">
+            <i class="fas fa-file-video fa-5x"></i>
+        </div>
+        <div class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsa inventore id tempora quam culpa veniam repellendus, consequuntur
+             enim sint magni impedit, quibusdam voluptate rem dolores esse fugiat minus eveniet?
+        </div>
+        <div class="end-part">
+            <p class="paragraph">Sunday 12 November 2021</p>
+            <button class="button-design">Read ></button>
+        </div>
+       </div> 
+       <div class="right-part">
+        <div class="low-icon">
+            <i class="fas fa-clock fa-5x"></i>
+        </div>
+        <div class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+             dolore eligendi eaque optio incidunt voluptatum vero beatae amet eius nulla,
+             debitis error tempore ullam quas facilis ducimus veniam similique nam.
+        </div>
+        <div class="end-part">
+            <p class="paragraph">Sunday 12 November 2021</p>
+            <button class="button-design">Read ></button>
+        </div>
+       </div> 
+    </div>
+</div>
+<footer>
+    <div class="footer-container">
+        <div class="Three-parts-footer">
+             <div class="end-part-footer">
+                <div class="first-col">
+                    <div >
+                        <li><a class="active" href="#home">Home</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#contact">About</a></li>
+                        <li><a href="#Events">Events</a></li>
+                      </div>
+                </div>
+                <div class="second-col">
+                    <div>
+                        <li><a href="#Gallery">Gallery</a></li>
+                        <li><a href="#Blog">Blog</a></li>
+                        <li><a href="#Services">Services</a></li>
+                        <li><a href="#Contact">Contact</a></li>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <div class="display-footer">
+                   <div class="row-display">
+                   <li><i class="fab fa-google-plus-g fa-2x"></i></li> 
+                   <li><i class="fab fa-pinterest-p fa-2x"></i></li> 
+                   <li><i class="fas fa-blog fa-2x"></i></li> 
+                   <li><i class="fab fa-youtube fa-2x"></i></li> 
+                   <li><i class="fal fa-comment-dots fa-2x"></i></li> 
+                   <li><i class="fab fa-tumblr fa-2x"></i></li> 
+                </div>
+                <div class="row-display">
+                   <li><i class="fab fa-twitter fa-2x"></i></li> 
+                   <li><i class="fab fa-lastfm fa-2x"></i></li> 
+                   <li><i class="fab fa-facebook-f fa-2x"></i></li> 
+                   <li><i class="fas fa-volleyball-ball fa-2x"></i></li> 
+                   <li><i class="fab fa-linkedin-in fa-2x"></i></li> 
+                </div>
+                </div>
+               
+            </div>
+            <div class="right-part">
+                
+            </div>
+
+        </div>
+    </div>
+</footer>
+</div>
+  </div> 
+</div> 
+</body>
+</html>
