@@ -1,0 +1,251 @@
+////////////////////lecture TWo part1///////////////////////////////
+# info commandName => to know what the command does;
+-----------to search for something-----------------
+# man passwd =>it will get the first place of passwd ;
+# man -s5 passwd OR man 5 passwd =>if i want the passwd in sction 5 for example i will try this;
+# man -f passwd=> search for command passwd in All section
+# whatis passwd=>search for command passwd in All section
+# man -k passwd=> search for command passwd in All section and in the description
+---------------to reach home for user who make login----------
+# cd /home
+# cd
+# cd $HOME
+#cd ~
+------------------ to reach to the root----------------
+# cd /
+------------------ to go back one step----------------
+# cd..
+------------------ The root is /----------------
+# /etc => to enter the etc
+# cd~ to enter the home and then reach to any folder iside it
+
+------------------ To display file content----------------
+# cat /etc/passwd
+# more /etc/passwd
+# head /etc/passwd => first 10 lines
+# tail /etc/passwd => last 10 lines
+# tail OR head -5 /etc/passwd => last 5 lines
+
+
+------------------ To know which directory or File----------------
+# ls => to display content
+# ls ~ => to display the directories in home of the user who make login
+# ls -F => to dispaly wgich is file or directory who has /
+# ls -a => to display the hidden file with (.)
+# ls -R => to display folder in foulder and so on
+# ls -file* => to display any file starts with file
+# ls *8 => to display any file ends with 8
+# ls file? => to display any file starts with file but has one char after it
+# ls file?? => to display any file starts with file but has two chars after it
+# ls file[a..z] => to display any file starts with file but has at the end from char a to z(constraints)
+
+
+------------------ To create file or more files----------------
+# touch ~/Downloads/file =>to create one file
+# touch ~/Downloads/file{1..5} => to create 5 files--> file1,file4,
+# touch ~/Downloads/file_{a..z} => to create 5 files --> file_a,file_b
+# rm ~/Downloads/file{a..z} => to delete file from a to z
+
+////////////////////lecture TWo part1///////////////////////////////
+# mkdir file{1..5} => to create 5 folders not file
+# mkdir -p /nagwa/talaat => to make directory has sub-directory
+# rmdir file{1..5} => to delete directories from 1 to 5
+# rm -r nagwa => to delete directory 
+# rm -ir nagwa => to delete directory but ask first to delete or not?
+# cp file ~/Downloads/ => copy file 
+# cp -r ~/Music ~/Downloads =>copy directory
+# mv file ~/Downloads/ =>move file
+# mv ~/Downloads/m7md ~/Music/Nagwa => move directory
+# sudo yum install package manager => who is responsible for installing package
+# vi newfile => to create file and able to editing
+# esc =>default mode able to move 
+# i,I,o,O,a,A => to go to the insert mode 
+# :w => to save the file with its content
+# :q => to exit
+# :wq => to save and exit
+# :q! => exit without save
+# /nagwa => to search for word nagwa (n samll) to move between the words
+# 5d => to delete the fifth line
+# 5,6 d => to delete the 5 and 6 line
+# :%s/nagwa/noga => to replace the word nagwa with noga
+# yy => for copy
+# p => for paste
+# dd => for cut
+# : set nu => to view the number of lines
+# : set nonu => to hide the number of lines
+# P => to write above the cursor
+# p => to write below the cursor
+# /NAGWA => it will get all capital and small 
+# :set showmode => it will display the mode we are in 
+# vi filename => to open the file 
+////////////////////lecture Three part1///////////////////////////////
+what is the difference between shell and terminal?
+the terminal: the place that i write the commands and it opens shell in the background 
+that takes the command and parse it to the kernel and do the commands
+# echo nagwa => it will print nagwa
+# echo $PATH => and the variable must be uppercase,it will print all address that the command in and user can run it
+# echo $USER => it will print the user
+# echo ${LOGNAME}=> it will print the user who make login
+# whoami => it will print the user who make login
+# echo $HOSTNAME =>the name of the machine
+# echo $PWD => the path of the place i am in
+# alias nagwa='ls' => its like ls and no space between = and another words
+#=>bashrc file=> you can write any echo or alias do you want to use
+#=> in etc :bashrc the change in the file will append for all users
+////////////////////lecture Three part3///////////////////////////////
+#=> for every file :(owner group,owneruser)
+#=> for every user :(username:nagwa,primarygroup:nagwa)=> must be at least one primary group
+# useradd hany => add user his name is hany
+# sudo useradd nada => act as a root to add user nada
+# cat /etc/passwd =>to know who are users and its information about them
+# /etc/shadow => all information about password
+# /etc/group => all information about the group
+////////////////////lecture Four part1///////////////////////////////
+# sudo passwd root OR nada => to change the password 
+# -l => to change the username
+# -c => to change the comment
+# -s => to change the shell
+# -g => to change the primary group
+# -aG => to change the secondary group, because G only will remove previous secondary group
+# -u => to change the user id
+# -L => to make lock to user
+# -n => the login name
+# sudo useradd karen -c "karen is sw engineer" -u 1003 -s /bin/bash -md /home/karen => to add new user her name its karen
+# id karen => to view the id of karen and groups
+# sudo passwd omnia => to make password for omnia
+# su - karen => switch to user karen
+# groups nagwatalaat => view groups of the user
+# su OR s- root OR su root or sudo -i => switch to the root
+# sudo userdel karen => delete user karen but not all her data
+# sudo userdel karen -r => delete karen with her all data
+# sudo rm -r karen => delete all data about karen
+# sudo groupdel os-Alex => delete group os-Alex
+# sudo groupadd nagwa2 => add group which name is nagwa2
+# sudo usermod ahmedali -g os-alex => generate primary group for the user which is name is os-alex 
+# sudo groupadd nagwa2 -g 1007 => make the id 1007 to the group
+# sudo chage -l username => view all information about the password
+# sudo cat /etc/shadow => view all information about the password the same thing of above
+# su - marco -c "cat /etc/shadow" => switch to username marco and run this command
+# ls -ld ~/Desktop => to know what is the permission in this directory (read,write,execute)
+#=> read (r) =>can do cat, move ,head, tail
+#=> write (w) =>w-> wq!
+#=> Read-write (rw) =>rw-> wq
+# ls -l => execute (xr) and for reading first use ls
+#(Read (4),Write(2),Execute(1))
+# chmod 5(to add execute also)64 =>to make the username execute the file
+#=> user->u , group-> g ,other ->o ,a->all ,Read-> r, Write->w, Execute-> x
+# chmod u+r =>add privilage read to user
+# chmod g-w => delete write privilage from group
+# chmod o=w =>overwrite with write and delete all history for other
+# chmod u+r,g-w,o+x =>mix with others separated with 
+# mv ~/Desktop/file1
+# ls -l file3 => dispaly the username and group name who create file3 
+# sudo chown : nagwa file3 => change the group name of user who create file3
+ ////////////////////lecture Five part1///////////////////////////////
+#=> runnig program is A process
+# ps => process status
+# ps -u mina  => all processes of user mina
+# ps -aux => all process on the system (pid) all users
+# ps -ef => all process and parent process id (pid,ppid)
+# ctrl +z => stopp
+# ctrl +c => terminate (close)
+# process name (getid) & => will run foreground process
+# jobs => will display all foreground processes
+# pgrep -a sleep => will display the process which is sleep in foreground
+# sleep 2000 =>make holding 2000
+# jobs fg %jobId => from background to foreground
+# ctrl +z =>make it stop first =>bg % jobId => from foreground to background
+# kill %processId => to  terminate the process
+#=> kill command by default  => terminate by default 
+# kill -l => to list all signals like SIGSTOP,SIGTERM
+#=> in current Terminal = kill -19  %JobId 
+# kill -19 %1 => it will search for signal number 19 and will make the signal to process number 1
+# => from another terminal =>pgrep -a process name(to know PID) => kill  -19 processId
+# SIGTERM (15) is better than SIGKILL(19) => it just wait for important process to finish their work
+# nice -n 5 sleep 200 & => to give priority 5 to sleep process 
+# renice -n 0 -p (PID) => give the PID priority number 0 if it doesn't work give it sudo
+# top => display all process is running
+#=> periority (-20:19)
+# pgrep -u nagwa => all processId that nagwa work on
+#=> grep [options] regular expression filename
+# grep '^d'  /etc/passwd => will display all words starts with d
+# grep '$login'  /etc/passwd => will display all words ends with login
+# grep -i =>match pattern(not case sensitive)
+# grep -v => show lines don't contain the expression(unmatched)
+# grep -c ahmed data.txt => how many lines contain pattern ahmed not the count of pattern
+# grep -c "^[0-9]\{1,\}$" => get 1 if number is integer (echo "123")
+# grep -r => search files in current directory and all subdirectories
+# grep ahm.d => starts with ahm and ends with d and dont care which in in the middle(for one char)
+# grep ahm*d =>starts with ahm and ends with d and dont care which in in the middle (for many char)
+# grep "ahme\{2\}" => e at least repeated two times
+# grep [aA]hmed <filename> => select from the set
+# grep ahm[^a-f]=> not contain the range
+# egrep "engineer(ing|s)" => to search for the last pttern if it has s OR ing
+# ls -R  => list all items in the place
+# ls -R > ~/output => list all the item in home for example in file named output
+# find / -name 'etc' => will display all etc in all files 
+# find / -name 'etc' 2> /dev/null => will display all etc in all files  without any errors
+# ls ~ | sort => list all files sorted
+# ls ~ | sort -r => list all files sorted in descending order
+# find / -name 'etc' 2> /dev/null | wc -l => count number of lines of the word etc in home
+# find / -mtime -1 print => find the editable file in less than one day
+# find /-perm 777 -print =>find files which has permission
+# atq => to view yours at queue
+# at -c <jobid> => to view job
+# at now +5min press CTRL -d =>process will execute only once at certain time
+# atrm <jobid> => to remove the job from the queue 
+# wc -l /etc/passwd => count number of lines (users) in system 
+# wc -c /etc/passwd => count number of characters in system 
+# wc -w /etc/passwd => count number of words in system 
+# history | more => display the history but parts by parts
+# diff file path another file path => compare between two files
+# sort -n  ~/test => it will sort number in ascending order
+# sort -nr  ~/test => it will sort number in descending order
+# sort ~/text -t ',' -k2 => sort the second column of the file text which is separated with ,
+# sort ~/text -t ',' -k2 -o outputsort =>and cat outputsort => it will display the result in outputsort  file
+=>root :uid= 0
+=>system user :uid=1-999
+=>regular user :uid>=1000
+>> => append
+>  => override
+********message ftom any facility with periority msg**********
+# sudo nano rsyslog.d/iti.conf 
+local7.notice  /var/log/iti
+:w
+:q
+# sudo service rsyslog restart
+# sudo systemct1 restart rsyslog
+# logger -p local7.notice "welcome iti"
+# tail /var/log/iti
+***************************************************
+# sudo journalctl -xe => to generate more messages describe the event
+                  -n <n> like -n 4 => get latest 4 lines
+                  -f :as tail -f
+                  -p <periority> like -p err => get lines which has errors
+                  --since :from date like --since:"1/1/2021"
+                  --until : to  date like --until:"1/2/2021"
+# sudo timedatectl => to display the time locally and universe and so on
+# sudo timedatectl set-time 10:06 => to change time if ntp in non avtive
+# sudo timedatectl  set-ntp false => to make ntp inactive
+# sudo timedatectl  set-ntp true=> to make ntp active
+# dpkg -i <package>.db =>install the package
+# dpkg -r <package> => remove the package
+#=> openssh-server_8.4p1-5_amd64.deb
+    openssh-server :package name
+    8.4p1 : version
+    5 release
+       odd:test package but not used in production
+       even :final package and used in production
+       amd64: Architecture
+       .deb :debian package
+# wget <url> => download the package
+# sudo dpkg -i openssh-server_8.4p1-5_amd64.deb
+#=> mirrors :is a group of servers host all (packages and dependencies)use nearest (least latency,geographically)
+# /etc/apt =>contains all configuration mirror 
+# /etc/apt/sources.list => contains all mirror you are using ...but with line contains # is commented
+head -40 yourfile.txt | tail -10 => from 30 to 40
+
+
+
+
+
