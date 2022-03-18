@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ .container{
+    width:900px;
+    height: auto;
+    margin: auto;
+    background-color: #eee;
+}
+.topic{
+    display:flex;
+    justify-content: space-between;
+}
+.pictures{
+    display:flex;
+    margin: 15px;
+    padding: 34px;
+    flex-direction: row;
+    
+    
+}
+.pic1,.pic2,.pic3,.pic4{
+    margin: 3px auto;
+}
+
+        @media screen and (max-width:900px) {
+   .container{
+       width: 100%;
+   } 
+}
+@media screen and (max-width:600px) {
+   .pictures{
+       display: flex;
+       flex-direction: column;
+   } 
+}
+h2{
+    color: gray;
+}
+  h3{
+      color: gray;
+      text-align: center;
+  }     
+a{
+    text-decoration: none;
+    color: gray;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="topic">
+        <div class="logo">
+            <img src="/logo.png" width="100px" height="100px" alt="">
+        </div>
+        <div class="author">
+            <h3>NAGWA TALAAT</h3>
+            <h5>FRONT_END NINJA</h5>
+        </div>
+     </div>
+    <hr class="top">
+    <div class="images">
+        <img src="xml.jpg" width="100%" alt="">
+    </div>
+        <h2>Featured Work</h2>
+         <div class="pictures">
+              <div class="pic1">
+                  <img src="thumb.png" alt="">
+                  <h3>MICKEY</h3>
+                  <a href="www.google.com">https://developer.mozilla.org</a>
+              </div>
+              <div class="pic2">
+                <img src="thumb.png" alt="">
+                <h3>MICKEY</h3>
+                <a href="www.google.com">https://developer.mozilla.org</a>
+              </div>
+              <div class="pic3">
+                <img src="thumb.png" alt="">
+                <h3>MICKEY</h3>
+                <a href="www.google.com">https://developer.mozilla.org</a>
+              </div>
+              <div class="pic4">
+                <img src="thumb.png" alt="">
+                <h3>MICKEY</h3>
+                <a href="www.google.com">https://developer.mozilla.org</a>
+              </div>
+         </div>
+   
+  </div>  
+</body>
+</html>
